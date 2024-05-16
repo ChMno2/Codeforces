@@ -9,25 +9,22 @@ int main()
 		int n;
 		cin>>n;
 		int a[n];
-		for(int i=0;i<n;i++)
+		int Cmd=-1;
+		vector<int> v(1001,0);
+		for(int i=1;i<=n;i++)
 		{
-			cin>>a[i];	
-		} 
-		int Cmd=0;
-		for(int i=0;i<n;i++)
+			int temp;
+			cin>>temp;
+			v[temp]=i;
+		}
+		for(int i=1;i<=1000;i++)
 		{
-			for(int j=i;j<n;j++)
+			for(int j=1;j<=1000;j++)
 			{
-				if(__gcd(a[i],a[j])==1)
-					Cmd=max(Cmd,i+j+2);	
-			}
-			 
-			
+				if(__gcd(i,j)==1&&v[i]&&v[j]) 
+					Cmd=max(Cmd,v[i]+v[j]);	
+			}	 
 		} 
-		if(Cmd==0)
-			cout<<"-1"<<endl;
-		else
-			cout<<Cmd<<endl;
-		
+		cout<<Cmd<<endl;
 	}
 }

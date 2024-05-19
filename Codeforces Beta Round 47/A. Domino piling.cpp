@@ -6,3 +6,4 @@ int main()
     cin>>m>>n;
     cout<<(m/2)*n+(m%2)*(n/2)<<endl;
 }
+ 

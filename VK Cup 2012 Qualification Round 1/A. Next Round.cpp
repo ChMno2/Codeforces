@@ -24,3 +24,4 @@ int main() {
 		cout<<i+1<<endl;
 }
 
+ 
